@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #413e42;
+  font-family: "Open-Sans", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.left-bar {
+  width: 200px;
+}
+
+.left-bar__icon {
+  margin-top: 30px;
+}
+
+.left-bar__icon.logo img {
+  width: 100px;
+}
+
+.left-bar__icon img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.left-bar__icon a {
+  text-decoration: none;
+  color: #413e42;
+  font-weight: bold;
+}
+.left-bar__icon a:hover {
+  color: #854cc2;
+}
+
+.main {
+  width: 700px;
+  box-shadow: 10px 8px 5px #d0c7d9;
+}
+
+.profile-cover {
+  height: 230px;
+  background-image: url("./images/alexander-andrews-eNoeWZkO7Zc-unsplash.jpg");
+  background-size: contain;
+}
+
+.profile-description {
+  position: relative;
+}
+
+.profile-description img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: -90px;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+.profile-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile-info span {
+  margin-left: 30px;
+}
+
+.profile-btn {
+  margin-left: 280px;
+  margin-top: 30px;
+}
+
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 40px;
+}
+
+.tweet-container h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.tweet-container .tweet-text {
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.tweet-container .tweet-image {
+  margin-bottom: 20px;
+}
+
+.tweet-container .tweet-button {
+  width: 130px;
+  padding: 3px 15px;
+  border-radius: 20px;
+  background: linear-gradient(0.25turn, #1e37b3, #fff, #6e27ba);
+  color: #6e27ba;
+  font-weight: bold;
+  border: 3px #6e27ba solid;
+}
+
+.tweet-form {
+  text-align: center;
+}
+.right-bar {
+  width: 300px;
+  padding-top: 30px;
+}
+.right-bar__search img {
+  width: 20px;
+}
+
+.right-bar__recommendations {
+  margin: 50px 0;
+  padding: 20px;
+  background-color: #d0c7d9;
+  border-radius: 20px;
+}
+
+.recommendations-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.recommendation {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+
+.recommendation img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.button {
+  padding: 3px 15px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #6e27ba;
+  font-weight: bold;
+  border: 3px #6e27ba solid;
+}
+.button:hover {
+  background-color: #6e27ba;
+  color: #fff;
+}
+
+.posts {
+  width: 500px;
+  margin-left: 420px;
+}
+
+.tweet-posts {
+  width: 500px;
+  box-shadow: 10px 8px 5px #d0c7d9;
+  margin-bottom: 30px;
+}
+
+.post-img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.post-description {
+  padding: 15px;
+  margin-bottom: 0;
+}
+.post-icons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+
+.post-icons button {
+  border: none;
+  background-color: transparent;
+}
+
+.post-icons img {
+  width: 25px;
+}
+.post-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  padding: 0;
+}
+.edit-form {
+  width: 400px;
+  text-align: center;
+}
+.edit-text {
+  margin-bottom: 15px;
+  height: 90px;
+}
+.tweet-button.edit-button {
+  width: 200px;
+  margin-top: 15px;
+}
+.pagination {
+  margin: 50px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.pagination button:last-child {
+  margin-right: 300px;
+  margin-left: 20px;
+}

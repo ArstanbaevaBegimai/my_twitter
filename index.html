@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Twitter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left bar -->
+
+      <div class="left-bar">
+        <div class="left-bar__icon logo">
+          <img class="logo-img" src="./icons/saturn.png" alt="logo" />
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/home.png" alt="home" />
+          <a href="">Home</a>
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/user.png" alt="user" />
+          <a href="">Profile</a>
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/twitterhashtag.png" alt="explore" />
+          <a href="">Explore</a>
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/twitternotification.png" alt="notification" />
+          <a href="">Notification</a>
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/twittermessages.png" alt="messages" />
+          <a href="">Messages</a>
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/twitterbookmark.png" alt="bookmark" />
+          <a href="">Bookmarks</a>
+        </div>
+        <div class="left-bar__icon">
+          <img src="./icons/twittermore.png" alt="more" />
+          <a href="">More</a>
+        </div>
+      </div>
+
+      <!-- Main -->
+
+      <div class="main">
+        <div class="profile-cover"></div>
+        <div class="profile-description">
+          <img src="./images/aiony-haust-3TLl_97HNJo-unsplash.jpg" alt="" />
+          <div class="profile-info">
+            <span><b>341</b> followers</span>
+            <span><b>230</b> following</span>
+          </div>
+          <button class="button profile-btn">Edit profile</button>
+        </div>
+        <div class="tweet-container">
+          <h4>Share what is happening</h4>
+          <form class="tweet-form">
+            <textarea
+              type="text-area"
+              class="form-control tweet-text"
+              placeholder="What is happening..."
+            ></textarea>
+            <input
+              type="text"
+              class="form-control tweet-image"
+              placeholder="Enter image url"
+            />
+            <button type="submit" class="tweet-button">Tweet</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right bar -->
+
+      <div class="right-bar">
+        <div class="input-group flex-nowrap right-bar__search">
+          <span class="input-group-text" id="addon-wrapping"
+            ><img src="./icons/loupe.png" alt=""
+          /></span>
+          <input
+            type="text"
+            class="form-control inp-search"
+            placeholder="search for..."
+            aria-label="search"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+        <div class="right-bar__recommendations">
+          <h4 class="recommendations-title">Suggestions to follow</h4>
+          <div class="recommendation">
+            <img
+              src="./images/jake-nackos-IF9TK5Uy-KI-unsplash.jpg"
+              alt=""
+              class="recommendation-avatar"
+            />
+            <div class="recommendation-info">
+              <p><b>Kelly</b>@kelly024</p>
+              <button class="button">Follow</button>
+            </div>
+          </div>
+
+          <div class="recommendation">
+            <img
+              src="./images/ivana-cajina-_7LbC5J-jw4-unsplash.jpg"
+              alt=""
+              class="recommendation-avatar"
+            />
+            <div class="recommendation-info">
+              <p><b>Ivan</b>@ivan2402</p>
+              <button class="button">Follow</button>
+            </div>
+          </div>
+          <div class="recommendation">
+            <img
+              src="./images/ayo-ogunseinde-sibVwORYqs0-unsplash.jpg"
+              alt=""
+              class="recommendation-avatar"
+            />
+            <div class="recommendation-info">
+              <p><b>Nate</b>@natewai</p>
+              <button class="button">Follow</button>
+            </div>
+          </div>
+          <div class="recommendation">
+            <img
+              src="./images/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+              alt=""
+              class="recommendation-avatar"
+            />
+            <div class="recommendation-info">
+              <p><b>Michaela</b>@micha12</p>
+              <button class="button">Follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="posts"></div>
+
+    <div class="pagination">
+        <button class="pagination-button prev-btn button btn">Prev</button>
+        <button class="pagination-button next-btn button btn">Next</button>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit tweet</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="tweet-container">
+                 <form class="edit-form">
+                  <textarea
+                    type="text-area"
+                    class="form-control edit-text"
+                    placeholder="What is happening..."
+                  ></textarea>
+                  <input
+                    type="text"
+                    class="form-control edit-image"
+                    placeholder="Enter image url"
+                  />
+                  <button type="submit" class="tweet-button edit-button">Save changes</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
